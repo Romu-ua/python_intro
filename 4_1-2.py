@@ -23,3 +23,15 @@ def file_upper(infile, outfile):
 		content = content.upper()
 		with open(outfile, 'w') as g:
 			print(content, file=g)
+
+# 4-2
+def but_first(ls):
+	it  = iter(ls)
+	next(it)
+	return it
+
+it = but_first([1, 2, 3, 4, 5])
+assert type(it) == type(iter([]))
+assert list(it) == [2, 3, 4, 5]
+
+
